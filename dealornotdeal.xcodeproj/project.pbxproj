@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881B2FBE2BB342B700FE2E0C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B2FBD2BB342B700FE2E0C /* MenuViewController.swift */; };
 		88599F342BA37C2B00061689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88599F332BA37C2B00061689 /* AppDelegate.swift */; };
 		88599F362BA37C2B00061689 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88599F352BA37C2B00061689 /* SceneDelegate.swift */; };
 		88599F382BA37C2B00061689 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88599F372BA37C2B00061689 /* ViewController.swift */; };
@@ -14,15 +15,17 @@
 		88599F3D2BA37C2D00061689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88599F3C2BA37C2D00061689 /* Assets.xcassets */; };
 		88599F402BA37C2D00061689 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88599F3E2BA37C2D00061689 /* LaunchScreen.storyboard */; };
 		88599F4E2BA3813800061689 /* fondo.webp in Resources */ = {isa = PBXBuildFile; fileRef = 88599F482BA3813800061689 /* fondo.webp */; };
-		88599F4F2BA3813800061689 /* dcxzqh8-31f1b0ae-4e18-4d25-a6b9-8d3b20d6271e.png in Resources */ = {isa = PBXBuildFile; fileRef = 88599F492BA3813800061689 /* dcxzqh8-31f1b0ae-4e18-4d25-a6b9-8d3b20d6271e.png */; };
 		88599F502BA3813800061689 /* apps.43605.13510798887494673.73a8dba3-eb77-4c24-87f7-74f199a14845.png in Resources */ = {isa = PBXBuildFile; fileRef = 88599F4A2BA3813800061689 /* apps.43605.13510798887494673.73a8dba3-eb77-4c24-87f7-74f199a14845.png */; };
 		88599F512BA3813800061689 /* maletin.png in Resources */ = {isa = PBXBuildFile; fileRef = 88599F4B2BA3813800061689 /* maletin.png */; };
 		88599F522BA3813800061689 /* titulo.png in Resources */ = {isa = PBXBuildFile; fileRef = 88599F4C2BA3813800061689 /* titulo.png */; };
 		88599F532BA3813800061689 /* fondo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 88599F4D2BA3813800061689 /* fondo2.png */; };
 		88599F552BA381A700061689 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88599F542BA381A700061689 /* SplashViewController.swift */; };
+		888F4EC22BB32E4900E3AAFA /* maletin-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 888F4EC12BB32E4900E3AAFA /* maletin-removebg-preview.png */; };
+		88ACC70D2BB337F400678AF2 /* dealicono.png in Resources */ = {isa = PBXBuildFile; fileRef = 88ACC70C2BB337F400678AF2 /* dealicono.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		881B2FBD2BB342B700FE2E0C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		88599F302BA37C2B00061689 /* dealornotdeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dealornotdeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88599F332BA37C2B00061689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88599F352BA37C2B00061689 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,12 +35,13 @@
 		88599F3F2BA37C2D00061689 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88599F412BA37C2D00061689 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88599F482BA3813800061689 /* fondo.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = fondo.webp; sourceTree = "<group>"; };
-		88599F492BA3813800061689 /* dcxzqh8-31f1b0ae-4e18-4d25-a6b9-8d3b20d6271e.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dcxzqh8-31f1b0ae-4e18-4d25-a6b9-8d3b20d6271e.png"; sourceTree = "<group>"; };
 		88599F4A2BA3813800061689 /* apps.43605.13510798887494673.73a8dba3-eb77-4c24-87f7-74f199a14845.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "apps.43605.13510798887494673.73a8dba3-eb77-4c24-87f7-74f199a14845.png"; sourceTree = "<group>"; };
 		88599F4B2BA3813800061689 /* maletin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maletin.png; sourceTree = "<group>"; };
 		88599F4C2BA3813800061689 /* titulo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titulo.png; sourceTree = "<group>"; };
 		88599F4D2BA3813800061689 /* fondo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo2.png; sourceTree = "<group>"; };
 		88599F542BA381A700061689 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		888F4EC12BB32E4900E3AAFA /* maletin-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "maletin-removebg-preview.png"; path = "../../../../../Downloads/maletin-removebg-preview.png"; sourceTree = "<group>"; };
+		88ACC70C2BB337F400678AF2 /* dealicono.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dealicono.png; path = ../../../../../Downloads/dealicono.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 				88599F352BA37C2B00061689 /* SceneDelegate.swift */,
 				88599F372BA37C2B00061689 /* ViewController.swift */,
 				88599F542BA381A700061689 /* SplashViewController.swift */,
+				881B2FBD2BB342B700FE2E0C /* MenuViewController.swift */,
 				88599F472BA3813800061689 /* imgdod */,
 				88599F392BA37C2B00061689 /* Main.storyboard */,
 				88599F3C2BA37C2D00061689 /* Assets.xcassets */,
@@ -86,8 +91,9 @@
 		88599F472BA3813800061689 /* imgdod */ = {
 			isa = PBXGroup;
 			children = (
+				888F4EC12BB32E4900E3AAFA /* maletin-removebg-preview.png */,
+				88ACC70C2BB337F400678AF2 /* dealicono.png */,
 				88599F482BA3813800061689 /* fondo.webp */,
-				88599F492BA3813800061689 /* dcxzqh8-31f1b0ae-4e18-4d25-a6b9-8d3b20d6271e.png */,
 				88599F4A2BA3813800061689 /* apps.43605.13510798887494673.73a8dba3-eb77-4c24-87f7-74f199a14845.png */,
 				88599F4B2BA3813800061689 /* maletin.png */,
 				88599F4C2BA3813800061689 /* titulo.png */,
@@ -154,14 +160,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88599F4F2BA3813800061689 /* dcxzqh8-31f1b0ae-4e18-4d25-a6b9-8d3b20d6271e.png in Resources */,
 				88599F512BA3813800061689 /* maletin.png in Resources */,
 				88599F4E2BA3813800061689 /* fondo.webp in Resources */,
 				88599F402BA37C2D00061689 /* LaunchScreen.storyboard in Resources */,
 				88599F532BA3813800061689 /* fondo2.png in Resources */,
 				88599F3D2BA37C2D00061689 /* Assets.xcassets in Resources */,
+				888F4EC22BB32E4900E3AAFA /* maletin-removebg-preview.png in Resources */,
 				88599F502BA3813800061689 /* apps.43605.13510798887494673.73a8dba3-eb77-4c24-87f7-74f199a14845.png in Resources */,
 				88599F522BA3813800061689 /* titulo.png in Resources */,
+				88ACC70D2BB337F400678AF2 /* dealicono.png in Resources */,
 				88599F3B2BA37C2B00061689 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88599F382BA37C2B00061689 /* ViewController.swift in Sources */,
+				881B2FBE2BB342B700FE2E0C /* MenuViewController.swift in Sources */,
 				88599F342BA37C2B00061689 /* AppDelegate.swift in Sources */,
 				88599F362BA37C2B00061689 /* SceneDelegate.swift in Sources */,
 				88599F552BA381A700061689 /* SplashViewController.swift in Sources */,
