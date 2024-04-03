@@ -400,7 +400,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xpF-wU-2Rg"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hAT-0v-Cxt" firstAttribute="width" secondItem="0bq-yQ-paD" secondAttribute="width" id="1H9-zm-nnf"/>
                             <constraint firstItem="Pfv-75-ev0" firstAttribute="top" secondItem="dOQ-wO-YIt" secondAttribute="bottom" constant="5" id="1Ns-DI-yVM"/>
