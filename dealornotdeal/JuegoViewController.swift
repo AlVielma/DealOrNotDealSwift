@@ -87,7 +87,7 @@ class JuegoViewController: UIViewController {
         // Cambiar la opacidad del label
             label.alpha = 0.2
         }
-        
+
         self.precioss.remove(at: randomIndex)
         
         print(precioSeleccionado)
@@ -97,6 +97,13 @@ class JuegoViewController: UIViewController {
             if(self.contadorrounds == 5){
                 self.llamarAlBanco()
             }
+            if(self.contadorrounds == 8){
+                
+            }
+            if(self.contadorrounds  == 12){
+                
+            }
+            
         
         }
             
@@ -112,26 +119,57 @@ class JuegoViewController: UIViewController {
     }
     
     
-    func calcularPorcentaje() -> Double {
-        let valorTotalRestante = self.precioss.reduce(0, +)
-        let porcentaje = (Double(valorTotalRestante) / Double(self.precioss.count)) / 1000000.0 * 100.0
-            return porcentaje
-        }
-    
     func llamarAlBanco() {
-        let porcentajeRestante = self.calcularPorcentaje()
-            let oferta = porcentajeRestante * Double(arc4random_uniform(20) + 75) / 100 // Oferta entre el 75% y el 95% del porcentaje restante
-            
-            let ofertaFormateada = String(format: "%.2f", oferta)
-            
-            let alerta = UIAlertController(title: "Llamada del Banco", message: "El banco ofrece $\(ofertaFormateada) por tu maletín. ¿Aceptas?", preferredStyle: .alert)
-            alerta.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { _ in
-                // Código para aceptar la oferta
-            }))
-            alerta.addAction(UIAlertAction(title: "Rechazar", style: .cancel, handler: nil))
-            
-            present(alerta, animated: true, completion: nil)
+      // Calcular el total de dinero restante en los maletines
+      var totalDinero = 0
+      for precio in precios {
+        if let precioInt = Int(precio.text!.replacingOccurrences(of: "$", with: "")) {
+          totalDinero += precioInt
         }
+      }
 
+      // Generar un porcentaje aleatorio entre 20% y 80%
+      let porcentajeOferta = Double.random(in: 0.2...0.8)
+
+      // Calcular la oferta del banquero
+      let ofertaBanquero = Int(Double(totalDinero) * porcentajeOferta)
+
+      // Mostrar un mensaje al jugador con la oferta del banquero
+      let mensajeOferta = "El banquero te ofrece $\(ofertaBanquero). ¿Aceptas la oferta?"
+      let alerta = UIAlertController(title: "¡Oferta del Banquero!", message: mensajeOferta, preferredStyle: .alert)
+
+      // Acción para aceptar la oferta
+      let aceptarOferta = UIAlertAction(title: "Aceptar", style: .default) { _ in
+        // Terminar el juego
+        //self.terminarJuego(conOferta: ofertaBanquero)
+      }
+
+      // Acción para rechazar la oferta
+      let rechazarOferta = UIAlertAction(title: "Rechazar", style: .cancel)
+
+      // Agregar las acciones al UIAlertController
+      alerta.addAction(aceptarOferta)
+      alerta.addAction(rechazarOferta)
+
+      // Presentar el UIAlertController al jugador
+      present(alerta, animated: true)
+        if(self.contadorrounds == 5){
+            
+        }
+        if(self.contadorrounds == 8){
+        
+        }
+        if(self.contadorrounds == 11){
+            
+        }
+        if(self.contadorrounds == 15){
+            
+        }
+        return
+       
+    }
+
+    
+   
    
 }
