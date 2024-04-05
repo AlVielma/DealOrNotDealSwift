@@ -190,7 +190,7 @@
                                 <color key="textColor" red="0.99618321657180786" green="0.90598422288894653" blue="0.0079385899007320404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKh-Ab-2sl">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKh-Ab-2sl">
                                 <rect key="frame" x="306" y="10" width="67" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="NAb-PT-mEG"/>
@@ -322,81 +322,129 @@
                                 <rect key="frame" x="97" y="97.666666666666686" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="1-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="vXh-kE-MW9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAo-kp-ngY">
                                 <rect key="frame" x="215" y="97.666666666666686" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="2-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="dNe-UR-TFS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p12-y8-K5C">
                                 <rect key="frame" x="38" y="183" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="3-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="Qf1-os-wib"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHS-vV-lB4">
                                 <rect key="frame" x="274" y="183" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="5-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="KIC-zQ-Jnr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIN-Iu-VvW">
                                 <rect key="frame" x="38" y="293.66666666666669" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="6-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="4aS-uN-adP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxt-pC-aGv">
                                 <rect key="frame" x="156" y="293.66666666666669" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="7-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="XHb-x3-Ohv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hI6-uc-P12">
                                 <rect key="frame" x="274" y="293.66666666666669" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="8-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="G0k-bA-Fgf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gBc-fl-RLJ">
                                 <rect key="frame" x="38" y="403.66666666666669" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="9-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="xzW-HH-0IK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAs-M0-lrc">
                                 <rect key="frame" x="156" y="403.66666666666669" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="10-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="dBx-nS-Ufh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyh-Av-gFa">
                                 <rect key="frame" x="274" y="403.66666666666669" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="11-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="4nG-8n-1fo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cA-eH-kPV">
                                 <rect key="frame" x="38" y="513.33333333333337" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="12-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="SJT-4Y-guj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDe-w8-Vm2">
                                 <rect key="frame" x="156" y="513.33333333333337" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="13-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="RbK-FL-dFU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ctf-aA-gKs">
                                 <rect key="frame" x="97" y="600.66666666666663" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="15-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="eia-fd-buf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nK-Mz-8KB">
                                 <rect key="frame" x="274" y="513.33333333333337" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="14-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="sIo-pk-riU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAT-0v-Cxt">
                                 <rect key="frame" x="215" y="600.66666666666663" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="16-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="CtJ-IO-ZbP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgG-w4-odM">
                                 <rect key="frame" x="156" y="183" width="81" height="77"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="4-removebg-preview.png"/>
+                                <connections>
+                                    <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="uXs-HW-fhc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xpF-wU-2Rg"/>
@@ -541,6 +589,7 @@
                     <connections>
                         <outlet property="contador" destination="gKh-Ab-2sl" id="RV0-8p-aih"/>
                         <outlet property="contadoround" destination="MCf-lS-ejs" id="7ed-do-ZdZ"/>
+                        <outlet property="micase" destination="Wj9-ym-Bw5" id="qmq-nv-VDB"/>
                         <outletCollection property="maletines" destination="0bq-yQ-paD" collectionClass="NSMutableArray" id="amo-SO-1f9"/>
                         <outletCollection property="maletines" destination="IAo-kp-ngY" collectionClass="NSMutableArray" id="0TE-dX-PDD"/>
                         <outletCollection property="maletines" destination="p12-y8-K5C" collectionClass="NSMutableArray" id="6uz-bD-yfQ"/>
