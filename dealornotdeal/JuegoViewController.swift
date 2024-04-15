@@ -111,7 +111,7 @@ class JuegoViewController: UIViewController {
                 self.llamarAlBanco()
             }
             else {
-                print("No")
+                
             }
             
             
