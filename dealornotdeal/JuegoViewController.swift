@@ -94,15 +94,26 @@ class JuegoViewController: UIViewController {
         let msj = UIAlertController(title: "valor recibido", message: "\(precioSeleccionado)" , preferredStyle: .alert)
         
         let ok = UIAlertAction(title: "Aceptar", style: .default){ _ in
-            if(self.contadorrounds == 5){
+            //Llamar al banco cada cietos maletines y/o rondaaas
+            if self.contadorrounds == 5 {
                 self.llamarAlBanco()
             }
-            if(self.contadorrounds == 8){
-                
+            else if self.contadorrounds == 9{
+                self.llamarAlBanco()
             }
-            if(self.contadorrounds  == 12){
-                
+            else if self.contadorrounds == 12{
+                self.llamarAlBanco()
             }
+            else if self.contadorrounds == 14{
+                self.llamarAlBanco()
+            }
+            else if self.contadorrounds == 15{
+                self.llamarAlBanco()
+            }
+            else {
+                print("No")
+            }
+            
             
         
         }
@@ -128,8 +139,8 @@ class JuegoViewController: UIViewController {
         }
       }
 
-      // Generar un porcentaje aleatorio entre 20% y 80%
-      let porcentajeOferta = Double.random(in: 0.2...0.8)
+      // Generar un porcentaje aleatorio entre 10% y 40%
+      let porcentajeOferta = Double.random(in: 0.1...0.4)
 
       // Calcular la oferta del banquero
       let ofertaBanquero = Int(Double(totalDinero) * porcentajeOferta)
@@ -141,7 +152,7 @@ class JuegoViewController: UIViewController {
       // Acción para aceptar la oferta
       let aceptarOferta = UIAlertAction(title: "Aceptar", style: .default) { _ in
         // Terminar el juego
-        //self.terminarJuego(conOferta: ofertaBanquero)
+        self.terminarJuego(conOferta: ofertaBanquero)
       }
 
       // Acción para rechazar la oferta
@@ -153,20 +164,25 @@ class JuegoViewController: UIViewController {
 
       // Presentar el UIAlertController al jugador
       present(alerta, animated: true)
-        if(self.contadorrounds == 5){
-            
-        }
-        if(self.contadorrounds == 8){
-        
-        }
-        if(self.contadorrounds == 11){
-            
-        }
-        if(self.contadorrounds == 15){
-            
-        }
-        return
+      
        
+    }
+    
+    func terminarJuego(conOferta oferta: Int) {
+        let mensajeFin: String
+        if oferta > 0 {
+            mensajeFin = "¡Felicidades! Has aceptado la oferta del banquero y has ganado $\(oferta)."
+        } else {
+            mensajeFin = "¡Felicidades! Has rechazado la oferta del banquero y conservas el premio de tu maletín."
+        }
+        
+        let alertaFin = UIAlertController(title: "¡Fin del Juego!", message: mensajeFin, preferredStyle: .alert)
+        let reiniciarJuego = UIAlertAction(title: "Reiniciar", style: .default) { _ in
+            // Aquí puedes implementar la lógica para reiniciar el juego, si deseas
+            // Por ejemplo, puedes restablecer todos los valores iniciales y comenzar de nuevo.
+        }
+        alertaFin.addAction(reiniciarJuego)
+        present(alertaFin, animated: true)
     }
 
     
