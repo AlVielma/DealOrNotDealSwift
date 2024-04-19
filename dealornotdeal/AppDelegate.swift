@@ -12,14 +12,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        crearUsuariosAleatorios()
+        crearUsuarios()
         abrirArchivo()
         return true
     }
 
     // MARK: - Crear usuarios aleatorios y guardarlos en el archivo plist
     
-    func crearUsuariosAleatorios() {
+    func crearUsuarios() {
         var usuarios: [[String:Any]] = []
 
         for i in 1...5 {

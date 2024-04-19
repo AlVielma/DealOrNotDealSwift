@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		881B2FBE2BB342B700FE2E0C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B2FBD2BB342B700FE2E0C /* MenuViewController.swift */; };
-		881B2FC22BB3531400FE2E0C /* backicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 881B2FC12BB3531400FE2E0C /* backicon.png */; };
 		881B2FC42BB3548200FE2E0C /* JuegoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B2FC32BB3548200FE2E0C /* JuegoViewController.swift */; };
 		881B2FC62BB366CC00FE2E0C /* LOGOUTT.png in Resources */ = {isa = PBXBuildFile; fileRef = 881B2FC52BB366CC00FE2E0C /* LOGOUTT.png */; };
 		88599F342BA37C2B00061689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88599F332BA37C2B00061689 /* AppDelegate.swift */; };
@@ -23,6 +22,7 @@
 		88599F522BA3813800061689 /* titulo.png in Resources */ = {isa = PBXBuildFile; fileRef = 88599F4C2BA3813800061689 /* titulo.png */; };
 		88599F532BA3813800061689 /* fondo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 88599F4D2BA3813800061689 /* fondo2.png */; };
 		88599F552BA381A700061689 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88599F542BA381A700061689 /* SplashViewController.swift */; };
+		8871B1992BD2F78100A453A6 /* backicono.png in Resources */ = {isa = PBXBuildFile; fileRef = 8871B1982BD2F78100A453A6 /* backicono.png */; };
 		88781C182BBDC8F4003E7BBB /* 1-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 88781C172BBDC8F4003E7BBB /* 1-removebg-preview.png */; };
 		88781C1A2BBDC90E003E7BBB /* 2-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 88781C192BBDC90E003E7BBB /* 2-removebg-preview.png */; };
 		88781C1C2BBDC91B003E7BBB /* 3-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 88781C1B2BBDC91B003E7BBB /* 3-removebg-preview.png */; };
@@ -39,7 +39,6 @@
 		88781C322BBDCA09003E7BBB /* 14-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 88781C312BBDCA09003E7BBB /* 14-removebg-preview.png */; };
 		88781C342BBDCA0F003E7BBB /* 15-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 88781C332BBDCA0F003E7BBB /* 15-removebg-preview.png */; };
 		88781C362BBDCA16003E7BBB /* 16-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 88781C352BBDCA16003E7BBB /* 16-removebg-preview.png */; };
-		888F4EC22BB32E4900E3AAFA /* maletin-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 888F4EC12BB32E4900E3AAFA /* maletin-removebg-preview.png */; };
 		88ACC70D2BB337F400678AF2 /* dealicono.png in Resources */ = {isa = PBXBuildFile; fileRef = 88ACC70C2BB337F400678AF2 /* dealicono.png */; };
 		88E9D7262BD1C93A007C604E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E9D7252BD1C93A007C604E /* RecordViewController.swift */; };
 		88E9D7282BD1CDA5007C604E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E9D7272BD1CDA5007C604E /* UserData.swift */; };
@@ -47,7 +46,6 @@
 
 /* Begin PBXFileReference section */
 		881B2FBD2BB342B700FE2E0C /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		881B2FC12BB3531400FE2E0C /* backicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backicon.png; path = ../../../../../Downloads/backicon.png; sourceTree = "<group>"; };
 		881B2FC32BB3548200FE2E0C /* JuegoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JuegoViewController.swift; sourceTree = "<group>"; };
 		881B2FC52BB366CC00FE2E0C /* LOGOUTT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LOGOUTT.png; path = ../../../../../Downloads/LOGOUTT.png; sourceTree = "<group>"; };
 		88599F302BA37C2B00061689 /* dealornotdeal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dealornotdeal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +62,7 @@
 		88599F4C2BA3813800061689 /* titulo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titulo.png; sourceTree = "<group>"; };
 		88599F4D2BA3813800061689 /* fondo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo2.png; sourceTree = "<group>"; };
 		88599F542BA381A700061689 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		8871B1982BD2F78100A453A6 /* backicono.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backicono.png; sourceTree = "<group>"; };
 		88781C172BBDC8F4003E7BBB /* 1-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1-removebg-preview.png"; sourceTree = "<group>"; };
 		88781C192BBDC90E003E7BBB /* 2-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2-removebg-preview.png"; sourceTree = "<group>"; };
 		88781C1B2BBDC91B003E7BBB /* 3-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-removebg-preview.png"; sourceTree = "<group>"; };
@@ -80,7 +79,6 @@
 		88781C312BBDCA09003E7BBB /* 14-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "14-removebg-preview.png"; sourceTree = "<group>"; };
 		88781C332BBDCA0F003E7BBB /* 15-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "15-removebg-preview.png"; sourceTree = "<group>"; };
 		88781C352BBDCA16003E7BBB /* 16-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "16-removebg-preview.png"; sourceTree = "<group>"; };
-		888F4EC12BB32E4900E3AAFA /* maletin-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "maletin-removebg-preview.png"; path = "../../../../../Downloads/maletin-removebg-preview.png"; sourceTree = "<group>"; };
 		88ACC70C2BB337F400678AF2 /* dealicono.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dealicono.png; path = ../../../../../Downloads/dealicono.png; sourceTree = "<group>"; };
 		88E9D7252BD1C93A007C604E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		88E9D7272BD1CDA5007C604E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -136,10 +134,10 @@
 		88599F472BA3813800061689 /* imgdod */ = {
 			isa = PBXGroup;
 			children = (
-				888F4EC12BB32E4900E3AAFA /* maletin-removebg-preview.png */,
 				88781C192BBDC90E003E7BBB /* 2-removebg-preview.png */,
 				88781C172BBDC8F4003E7BBB /* 1-removebg-preview.png */,
 				88781C1B2BBDC91B003E7BBB /* 3-removebg-preview.png */,
+				8871B1982BD2F78100A453A6 /* backicono.png */,
 				88781C1F2BBDC92C003E7BBB /* 5-removebg-preview.png */,
 				88781C1D2BBDC922003E7BBB /* 4-removebg-preview.png */,
 				88781C212BBDC99D003E7BBB /* 6-removebg-preview.png */,
@@ -154,7 +152,6 @@
 				88781C332BBDCA0F003E7BBB /* 15-removebg-preview.png */,
 				88781C352BBDCA16003E7BBB /* 16-removebg-preview.png */,
 				881B2FC52BB366CC00FE2E0C /* LOGOUTT.png */,
-				881B2FC12BB3531400FE2E0C /* backicon.png */,
 				88ACC70C2BB337F400678AF2 /* dealicono.png */,
 				88599F482BA3813800061689 /* fondo.webp */,
 				88599F4A2BA3813800061689 /* apps.43605.13510798887494673.73a8dba3-eb77-4c24-87f7-74f199a14845.png */,
@@ -231,6 +228,7 @@
 				88781C282BBDC9D8003E7BBB /* 9-removebg-preview.png in Resources */,
 				881B2FC62BB366CC00FE2E0C /* LOGOUTT.png in Resources */,
 				88781C222BBDC99D003E7BBB /* 6-removebg-preview.png in Resources */,
+				8871B1992BD2F78100A453A6 /* backicono.png in Resources */,
 				88781C362BBDCA16003E7BBB /* 16-removebg-preview.png in Resources */,
 				88781C342BBDCA0F003E7BBB /* 15-removebg-preview.png in Resources */,
 				88599F512BA3813800061689 /* maletin.png in Resources */,
@@ -241,8 +239,6 @@
 				88599F532BA3813800061689 /* fondo2.png in Resources */,
 				88781C322BBDCA09003E7BBB /* 14-removebg-preview.png in Resources */,
 				88599F3D2BA37C2D00061689 /* Assets.xcassets in Resources */,
-				881B2FC22BB3531400FE2E0C /* backicon.png in Resources */,
-				888F4EC22BB32E4900E3AAFA /* maletin-removebg-preview.png in Resources */,
 				88599F502BA3813800061689 /* apps.43605.13510798887494673.73a8dba3-eb77-4c24-87f7-74f199a14845.png in Resources */,
 				88781C2C2BBDC9ED003E7BBB /* 11-removebg-preview.png in Resources */,
 				88781C202BBDC92C003E7BBB /* 5-removebg-preview.png in Resources */,
