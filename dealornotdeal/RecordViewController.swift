@@ -27,6 +27,7 @@ class RecordViewController: UIViewController {
             let diccionario = try PropertyListSerialization.propertyList(from: archivo, format: nil) as! [[String:Any]]
             
             // Llamar a la función para dibujar los registros de usuarios
+            print(diccionario)
             dibujarRecords(registros: diccionario)
             
         } catch {
@@ -37,7 +38,7 @@ class RecordViewController: UIViewController {
     func dibujarRecords(registros: [[String:Any]]) {
         var y = 10.0
         let x = 10.0
-        let h = 120.0
+        let h = 80.0
         let k = 10.0
         let w = scrPersonajes.frame.width - 2*x
 

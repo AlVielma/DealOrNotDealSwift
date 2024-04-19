@@ -28,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let usuario: [String:Any] = ["nombre": nombre, "record": record]
             usuarios.append(usuario)
         }
-
         guardarArchivo(diccionario: usuarios)
     }
 

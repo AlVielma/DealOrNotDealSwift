@@ -6,11 +6,10 @@
 //
 
 import UIKit
+import AVFoundation
 
 class JuegoViewController: UIViewController {
     
-    
-  
     // Arreglo de maletines
     @IBOutlet var maletines: [UIButton]!
     // Contador
@@ -20,8 +19,6 @@ class JuegoViewController: UIViewController {
     // Los precios que salen abajo
     @IBOutlet var precios: [UILabel]!
     
-    @IBOutlet var micase: UILabel!
-    
     // Arreglo de los precios
     var precioss = [1, 10, 50, 100, 200, 400, 500, 1000, 5000, 10000, 50000, 100000, 200000, 400000, 500000, 1000000]
     var primerMaletinValor: Int = 0
@@ -29,7 +26,9 @@ class JuegoViewController: UIViewController {
     var contadorx = 0
     var contadorrounds = 0
     
+    var user = UserData()
     
+    var sonidoBanquero: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +44,9 @@ class JuegoViewController: UIViewController {
         
         // Iniciar contador de tiempo
         iniciarContadorTiempo()
+        
+        // Cargar los sonidos
+        cargarSonidos()
     }
     
     // Función para iniciar el contador de tiempo
@@ -62,10 +64,26 @@ class JuegoViewController: UIViewController {
         }
     }
     
+    // Función para cargar los sonidos
+    func cargarSonidos() {
+        do {
+            if let path = Bundle.main.path(forResource: "llamada", ofType: "mp3") {
+                let url = URL(fileURLWithPath: path)
+                sonidoBanquero = try AVAudioPlayer(contentsOf: url)
+            }
+        } catch {
+            print("Error al cargar los sonidos: \(error.localizedDescription)")
+        }
+    }
     
     
+    // Función para reproducir el sonido del banquero
+    func reproducirSonidoBanquero() {
+        sonidoBanquero?.play()
+    }
     
     @IBAction func abrirmaletin(_ sender: UIButton) {
+        
         // Generar un índice aleatorio
         let randomIndex = Int.random(in: 0..<precioss.count)
         // Obtener el precio correspondiente al índice aleatorio
@@ -77,7 +95,6 @@ class JuegoViewController: UIViewController {
         } else {
             // Encontrar el label relacionado con el precio
             if let label = precios.first(where: { $0.text == "$\(precioSeleccionado)" }) {
-                // Cambiar la opacidad del label
                 label.alpha = 0.2
             }
         }
@@ -88,6 +105,15 @@ class JuegoViewController: UIViewController {
         
         self.precioss.remove(at: randomIndex)
         print(precioSeleccionado)
+        
+        // Verificar si es el primer maletín
+        if primerMaletinValor == precioSeleccionado {
+            // Es el primer maletín, no mostramos la alerta
+            return
+        }
+
+           // Mostrar alerta con el valor del maletín
+        //mostrarValorMaletinAlerta(precioSeleccionado)
         
         // Verificar si es el último maletín
         if contadorrounds == 15 {
@@ -100,11 +126,18 @@ class JuegoViewController: UIViewController {
             
             // Llamar al banco cada ciertos maletines y/o rondas
             if self.contadorrounds == 5 || self.contadorrounds == 9 || self.contadorrounds == 12 || self.contadorrounds == 14 {
+                // Reproducir sonido del banquero
+                reproducirSonidoBanquero()
                 self.llamarAlBanco()
             }
         }
     }
-
+    /*func mostrarValorMaletinAlerta(_ valor: Int) {
+        let alerta = UIAlertController(title: "Valor del Maletín", message: "¡Has ganado $\(valor)!", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alerta.addAction(okAction)
+        present(alerta, animated: true)
+    }*/
     
     func mostrarResultadoFinal() {
         let msj = UIAlertController(title: "Resultado Final", message: "¡Has ganado $\(primerMaletinValor)! Por favor, ingresa tu nombre:", preferredStyle: .alert)
@@ -122,16 +155,12 @@ class JuegoViewController: UIViewController {
                 return
             }
             
-            // Aquí puedes realizar acciones con el nombre del jugador, como almacenarlo o mostrarlo en otro lugar
-            
-            // Mostrar un mensaje de fin de juego con el nombre del jugador
             let mensajeFin = "¡\(nombreJugador), has ganado $\(self?.primerMaletinValor ?? 0)!"
             let alertaFin = UIAlertController(title: "¡Felicidades!", message: mensajeFin, preferredStyle: .alert)
-            let reiniciarJuego = UIAlertAction(title: "Reiniciar", style: .default) { _ in
-                // Aquí puedes implementar la lógica para reiniciar el juego, si deseas
-                // Por ejemplo, puedes restablecer todos los valores iniciales y comenzar de nuevo.
+            let finalizarJuego = UIAlertAction(title: "Finalizar", style: .default) { _ in
+                
             }
-            alertaFin.addAction(reiniciarJuego)
+            alertaFin.addAction(finalizarJuego)
             self?.present(alertaFin, animated: true)
         }
         msj.addAction(ok)
@@ -148,6 +177,8 @@ class JuegoViewController: UIViewController {
         alertaNombreVacio.addAction(okAction)
         present(alertaNombreVacio, animated: true)
     }
+    
+    
     
     func llamarAlBanco() {
         // Calcular el total de dinero restante en los maletines
@@ -205,9 +236,7 @@ class JuegoViewController: UIViewController {
                 self.mostrarAlertaNombreVacio(ofertaBanquero: ofertaBanquero)
                 return
             }
-            // Continuar el juego con la oferta del banquero y el nombre del jugador
-            // Aquí puedes agregar la lógica adicional que necesites para continuar el juego
-            // Por ejemplo, puedes iniciar una nueva ronda o actualizar la interfaz de usuario.
+            self.terminarJuego(conOferta: ofertaBanquero, nombreJugador: nombreJugador)
         }
 
         // Agregar la acción para confirmar el nombre al UIAlertController
@@ -243,33 +272,44 @@ class JuegoViewController: UIViewController {
         }
 
         let alertaFin = UIAlertController(title: "¡Fin del Juego!", message: mensajeFin, preferredStyle: .alert)
-        let reiniciarJuego = UIAlertAction(title: "Reiniciar", style: .default) { _ in
-            // Aquí puedes implementar la lógica para reiniciar el juego, si deseas
-            // Por ejemplo, puedes restablecer todos los valores iniciales y comenzar de nuevo.
+        let finalizarJuego = UIAlertAction(title: "Finalizar", style: .default) { _ in
+            self.subirdatosplist(record: oferta, nombreJugador: nombreJugador)
+            if let recordViewController = self.storyboard?.instantiateViewController(withIdentifier: "RecordViewController") {
+                  self.navigationController?.pushViewController(recordViewController, animated: true)
+              }
         }
-        alertaFin.addAction(reiniciarJuego)
+        alertaFin.addAction(finalizarJuego)
         present(alertaFin, animated: true)
     }
 
-    
-    func terminarJuego(conOferta oferta: Int) {
-        let mensajeFin: String
-        if oferta > 0 {
-            mensajeFin = "¡Felicidades! Has aceptado la oferta del banquero y has ganado $\(oferta)."
-        } else {
-            mensajeFin = "¡Felicidades! Has rechazado la oferta del banquero y conservas el premio de tu maletín."
-        }
-        
-        let alertaFin = UIAlertController(title: "¡Fin del Juego!", message: mensajeFin, preferredStyle: .alert)
-        let reiniciarJuego = UIAlertAction(title: "Reiniciar", style: .default) { _ in
-            // Aquí puedes implementar la lógica para reiniciar el juego, si deseas
-            // Por ejemplo, puedes restablecer todos los valores iniciales y comenzar de nuevo.
-        }
-        alertaFin.addAction(reiniciarJuego)
-        present(alertaFin, animated: true)
-    }
+        func subirdatosplist(record: Int, nombreJugador: String) {
+            // Crear un diccionario con los datos que deseas guardar
+            let diccionario: [String: Any] = [
+                "record": record,
+                "nombreJugador": nombreJugador
+            ]
 
+            // Obtener la ruta del archivo Config.plist en el directorio de documentos
+            let ruta = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/Config.plist"
+            let urlArchivo = URL(fileURLWithPath: ruta)
+
+            do {
+                // Convertir el diccionario a datos en formato XML
+                let datos = try PropertyListSerialization.data(fromPropertyList: diccionario, format: .xml, options: 0)
+                
+                // Escribir los datos en el archivo
+                try datos.write(to: urlArchivo)
+                print("Datos guardados exitosamente en \(ruta)")
+            } catch {
+                print("Error al guardar el archivo plist: \(error)")
+            }
+        }
+    
+    
     
    
-   
+    @IBAction func regresar() {
+        dismiss(animated: true)
+    }
+    
 }

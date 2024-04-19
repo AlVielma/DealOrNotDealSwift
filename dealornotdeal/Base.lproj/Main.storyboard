@@ -41,23 +41,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsj-3k-Qel">
-                                <rect key="frame" x="101.66666666666669" y="390.66666666666669" width="190" height="60"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ZB9-Bx-LDA"/>
-                                    <constraint firstAttribute="width" constant="190" id="sVj-Hg-dTn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Instrucciones"/>
-                                <connections>
-                                    <segue destination="aZq-Kq-xMf" kind="presentation" id="gJJ-HT-v2t"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkP-1x-j1G">
-                                <rect key="frame" x="121.66666666666669" y="500.66666666666674" width="150" height="60"/>
+                                <rect key="frame" x="121.66666666666669" y="390.66666666666669" width="150" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bDX-bV-b9V"/>
@@ -90,7 +75,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0G-lP-7ZM">
-                                <rect key="frame" x="121.66666666666669" y="610.66666666666663" width="150" height="60"/>
+                                <rect key="frame" x="121.66666666666669" y="500.66666666666674" width="150" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="16t-Aq-aui"/>
                                     <constraint firstAttribute="width" constant="150" id="vI4-Ua-YUj"/>
@@ -103,28 +88,40 @@
                                     <segue destination="x0q-5n-gc4" kind="presentation" modalPresentationStyle="fullScreen" id="wpb-Ju-Flt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcE-gc-igf">
+                                <rect key="frame" x="10" y="782" width="70" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Sg6-D2-mfw"/>
+                                    <constraint firstAttribute="width" constant="70" id="UT1-cG-WtW"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="consonido.png"/>
+                                <connections>
+                                    <action selector="musicabutton" destination="HSF-jX-cIr" eventType="touchUpInside" id="Ozg-ku-CaP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kuu-Bm-1uI"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="k0G-lP-7ZM" firstAttribute="centerX" secondItem="HhB-iw-cJ9" secondAttribute="centerX" id="BWB-dV-NDb"/>
-                            <constraint firstItem="k0G-lP-7ZM" firstAttribute="top" secondItem="gkP-1x-j1G" secondAttribute="bottom" constant="50" id="IcU-an-Sey"/>
                             <constraint firstItem="WAe-Rw-zUB" firstAttribute="top" secondItem="osU-6t-0ag" secondAttribute="bottom" constant="15" id="Js7-Nz-FhM"/>
+                            <constraint firstItem="jcE-gc-igf" firstAttribute="leading" secondItem="Kuu-Bm-1uI" secondAttribute="leading" constant="10" id="M1D-P6-mur"/>
                             <constraint firstItem="k0G-lP-7ZM" firstAttribute="top" secondItem="gkP-1x-j1G" secondAttribute="bottom" constant="50" id="Udn-iD-U2O"/>
                             <constraint firstItem="osU-6t-0ag" firstAttribute="centerX" secondItem="HhB-iw-cJ9" secondAttribute="centerX" id="WSH-Wr-AqS"/>
                             <constraint firstItem="WAe-Rw-zUB" firstAttribute="centerX" secondItem="HhB-iw-cJ9" secondAttribute="centerX" id="WXF-bl-Sqx"/>
-                            <constraint firstItem="gkP-1x-j1G" firstAttribute="top" secondItem="Hsj-3k-Qel" secondAttribute="bottom" constant="50" id="caX-ty-Ych"/>
+                            <constraint firstItem="gkP-1x-j1G" firstAttribute="top" secondItem="WAe-Rw-zUB" secondAttribute="bottom" constant="50" id="czn-XV-XF4"/>
+                            <constraint firstItem="Kuu-Bm-1uI" firstAttribute="bottom" secondItem="jcE-gc-igf" secondAttribute="bottom" constant="10" id="eQs-X1-g45"/>
                             <constraint firstItem="osU-6t-0ag" firstAttribute="width" secondItem="HhB-iw-cJ9" secondAttribute="width" id="f5B-Pe-Yh0"/>
                             <constraint firstItem="gkP-1x-j1G" firstAttribute="centerX" secondItem="HhB-iw-cJ9" secondAttribute="centerX" id="fcV-nm-asZ"/>
-                            <constraint firstItem="Hsj-3k-Qel" firstAttribute="top" secondItem="WAe-Rw-zUB" secondAttribute="bottom" constant="50" id="m3q-k4-Kby"/>
-                            <constraint firstItem="Hsj-3k-Qel" firstAttribute="centerX" secondItem="HhB-iw-cJ9" secondAttribute="centerX" id="skR-bv-igD"/>
                             <constraint firstItem="osU-6t-0ag" firstAttribute="height" secondItem="HhB-iw-cJ9" secondAttribute="height" multiplier="0.3" id="vUN-sS-sNX"/>
                             <constraint firstItem="osU-6t-0ag" firstAttribute="top" secondItem="Kuu-Bm-1uI" secondAttribute="top" constant="10" id="zoN-9V-1oZ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="botonmusica" destination="jcE-gc-igf" id="0HT-7T-KTj"/>
                         <outletCollection property="diseño" destination="WAe-Rw-zUB" collectionClass="NSMutableArray" id="Grp-d0-WR6"/>
-                        <outletCollection property="diseño" destination="Hsj-3k-Qel" collectionClass="NSMutableArray" id="6o9-Su-v90"/>
                         <outletCollection property="diseño" destination="gkP-1x-j1G" collectionClass="NSMutableArray" id="GI5-KN-PLo"/>
                         <outletCollection property="diseño" destination="k0G-lP-7ZM" collectionClass="NSMutableArray" id="SZ1-Dh-bHE"/>
                     </connections>
@@ -214,12 +211,6 @@ Universidad Tecnologica De Torreon</string>
                                     <constraint firstAttribute="height" constant="21" id="NAb-PT-mEG"/>
                                     <constraint firstAttribute="width" constant="67" id="WCQ-xa-gnI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.99618321657180786" green="0.90598422288894653" blue="0.0079385899007320404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu case:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wj9-ym-Bw5">
-                                <rect key="frame" x="20" y="10" width="68" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.99618321657180786" green="0.90598422288894653" blue="0.0079385899007320404" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -464,6 +455,18 @@ Universidad Tecnologica De Torreon</string>
                                     <action selector="abrirmaletin:" destination="baT-86-Mee" eventType="touchUpInside" id="uXs-HW-fhc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbs-vw-4qn">
+                                <rect key="frame" x="10" y="10" width="44" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="qZP-Zx-I3c"/>
+                                    <constraint firstAttribute="width" constant="44" id="skE-Oo-d7W"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="backicono.png"/>
+                                <connections>
+                                    <action selector="regresar" destination="baT-86-Mee" eventType="touchUpInside" id="0IM-bV-Nbf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xpF-wU-2Rg"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -475,7 +478,6 @@ Universidad Tecnologica De Torreon</string>
                             <constraint firstItem="vgP-fJ-5wP" firstAttribute="width" secondItem="t8p-tS-cdP" secondAttribute="width" id="3Gi-U3-ajt"/>
                             <constraint firstItem="dqu-M7-knP" firstAttribute="width" secondItem="t8p-tS-cdP" secondAttribute="width" id="3QX-kI-2Kj"/>
                             <constraint firstItem="nDe-w8-Vm2" firstAttribute="height" secondItem="0bq-yQ-paD" secondAttribute="height" id="3Qj-BR-5e1"/>
-                            <constraint firstItem="Wj9-ym-Bw5" firstAttribute="leading" secondItem="xpF-wU-2Rg" secondAttribute="leading" constant="20" id="3eM-xU-Pd6"/>
                             <constraint firstItem="hI6-uc-P12" firstAttribute="width" secondItem="0bq-yQ-paD" secondAttribute="width" id="48F-a3-Eza"/>
                             <constraint firstItem="58b-Vg-Zxc" firstAttribute="height" secondItem="t8p-tS-cdP" secondAttribute="height" id="4VS-Vy-QEA"/>
                             <constraint firstItem="dyh-Av-gFa" firstAttribute="height" secondItem="0bq-yQ-paD" secondAttribute="height" id="4hx-4A-a93"/>
@@ -522,7 +524,6 @@ Universidad Tecnologica De Torreon</string>
                             <constraint firstItem="SAs-M0-lrc" firstAttribute="width" secondItem="0bq-yQ-paD" secondAttribute="width" id="O4E-kR-1NM"/>
                             <constraint firstItem="nDe-w8-Vm2" firstAttribute="centerX" secondItem="l5q-Rg-MvX" secondAttribute="centerX" id="Oko-Yr-Gah"/>
                             <constraint firstItem="hxt-pC-aGv" firstAttribute="centerX" secondItem="l5q-Rg-MvX" secondAttribute="centerX" id="Ou6-DF-ofT"/>
-                            <constraint firstItem="Wj9-ym-Bw5" firstAttribute="top" secondItem="xpF-wU-2Rg" secondAttribute="top" constant="10" id="P4x-yo-hSz"/>
                             <constraint firstItem="hI6-uc-P12" firstAttribute="centerX" secondItem="l5q-Rg-MvX" secondAttribute="centerX" multiplier="1.6" id="PBN-zY-2Nt"/>
                             <constraint firstItem="SAs-M0-lrc" firstAttribute="centerX" secondItem="l5q-Rg-MvX" secondAttribute="centerX" id="QQE-ZG-5dm"/>
                             <constraint firstItem="xpF-wU-2Rg" firstAttribute="bottom" secondItem="FQu-VD-Tt2" secondAttribute="bottom" constant="20" id="QeK-c7-6pl"/>
@@ -546,6 +547,7 @@ Universidad Tecnologica De Torreon</string>
                             <constraint firstItem="9cA-eH-kPV" firstAttribute="centerX" secondItem="l5q-Rg-MvX" secondAttribute="centerX" multiplier="0.4" id="WUD-4D-riy"/>
                             <constraint firstItem="p12-y8-K5C" firstAttribute="centerY" secondItem="l5q-Rg-MvX" secondAttribute="centerY" multiplier="0.52" id="Z4U-ee-yPG"/>
                             <constraint firstItem="Pfv-75-ev0" firstAttribute="height" secondItem="t8p-tS-cdP" secondAttribute="height" id="ZRm-9R-jH1"/>
+                            <constraint firstItem="Mbs-vw-4qn" firstAttribute="top" secondItem="xpF-wU-2Rg" secondAttribute="top" constant="10" id="ZVv-Ey-2rQ"/>
                             <constraint firstItem="58b-Vg-Zxc" firstAttribute="top" secondItem="dqu-M7-knP" secondAttribute="bottom" constant="5" id="aER-IW-sfp"/>
                             <constraint firstItem="Zl8-5l-id3" firstAttribute="top" secondItem="5lk-JQ-S75" secondAttribute="bottom" constant="5" id="aGw-gN-FdU"/>
                             <constraint firstItem="xpF-wU-2Rg" firstAttribute="trailing" secondItem="c2J-lh-3Ex" secondAttribute="trailing" constant="20" id="aaP-F6-oYW"/>
@@ -594,6 +596,7 @@ Universidad Tecnologica De Torreon</string>
                             <constraint firstItem="oMr-d8-RZZ" firstAttribute="height" secondItem="t8p-tS-cdP" secondAttribute="height" id="t2T-r3-eVg"/>
                             <constraint firstItem="6hK-Vq-21h" firstAttribute="width" secondItem="t8p-tS-cdP" secondAttribute="width" id="tQH-Cd-wXV"/>
                             <constraint firstItem="xPr-TK-ZBK" firstAttribute="centerX" secondItem="l5q-Rg-MvX" secondAttribute="centerX" multiplier="0.77" id="tbi-9w-gnp"/>
+                            <constraint firstItem="Mbs-vw-4qn" firstAttribute="leading" secondItem="xpF-wU-2Rg" secondAttribute="leading" constant="10" id="u83-8s-dou"/>
                             <constraint firstItem="Ctf-aA-gKs" firstAttribute="width" secondItem="0bq-yQ-paD" secondAttribute="width" id="ulU-Gm-aTC"/>
                             <constraint firstItem="6hK-Vq-21h" firstAttribute="height" secondItem="t8p-tS-cdP" secondAttribute="height" id="v1c-pC-lCg"/>
                             <constraint firstItem="OgG-w4-odM" firstAttribute="centerY" secondItem="l5q-Rg-MvX" secondAttribute="centerY" multiplier="0.52" id="wFv-xt-kuy"/>
@@ -607,7 +610,6 @@ Universidad Tecnologica De Torreon</string>
                     <connections>
                         <outlet property="contador" destination="gKh-Ab-2sl" id="RV0-8p-aih"/>
                         <outlet property="contadoround" destination="MCf-lS-ejs" id="7ed-do-ZdZ"/>
-                        <outlet property="micase" destination="Wj9-ym-Bw5" id="qmq-nv-VDB"/>
                         <outletCollection property="maletines" destination="0bq-yQ-paD" collectionClass="NSMutableArray" id="amo-SO-1f9"/>
                         <outletCollection property="maletines" destination="IAo-kp-ngY" collectionClass="NSMutableArray" id="0TE-dX-PDD"/>
                         <outletCollection property="maletines" destination="p12-y8-K5C" collectionClass="NSMutableArray" id="6uz-bD-yfQ"/>
@@ -648,7 +650,7 @@ Universidad Tecnologica De Torreon</string>
         <!--Record View Controller-->
         <scene sceneID="lmk-qD-kjx">
             <objects>
-                <viewController id="x0q-5n-gc4" customClass="RecordViewController" customModule="dealornotdeal" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecordViewController" id="x0q-5n-gc4" customClass="RecordViewController" customModule="dealornotdeal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kCX-g9-3St">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -664,13 +666,13 @@ Universidad Tecnologica De Torreon</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd9-cf-Rhd">
-                                <rect key="frame" x="10" y="10" width="55" height="40"/>
+                                <rect key="frame" x="10" y="10" width="44" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="2og-RC-opB"/>
-                                    <constraint firstAttribute="width" constant="55" id="zwH-pG-Ci4"/>
+                                    <constraint firstAttribute="height" constant="35" id="2og-RC-opB"/>
+                                    <constraint firstAttribute="width" constant="44" id="zwH-pG-Ci4"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="backicon.png"/>
+                                <state key="normal" title="Button" image="backicono.png"/>
                                 <connections>
                                     <action selector="regresar" destination="x0q-5n-gc4" eventType="touchUpInside" id="2XY-i3-2cT"/>
                                 </connections>
@@ -706,17 +708,17 @@ Universidad Tecnologica De Torreon</string>
             <objects>
                 <viewController id="aZq-Kq-xMf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lFR-nA-C5y">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instrucciones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0O-pP-SAl">
-                                <rect key="frame" x="132" y="10" width="129" height="24"/>
+                                <rect key="frame" x="132" y="69" width="129" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" red="0.98021394014358521" green="0.92718237638473511" blue="0.023964108899235725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b3M-Xz-MC3">
-                                <rect key="frame" x="0.0" y="44" width="393" height="798"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <string key="text">Elige un maletín inicial entre una selección de maletines cerrados.
 Abre un número predeterminado de maletines en cada ronda.
 Después de cada ronda, el banquero hace una oferta para comprar el maletín del concursante.
@@ -764,7 +766,8 @@ El juego continúa hasta que el concursante acepta una oferta o hasta que solo q
         <image name="9-removebg-preview.png" width="143" height="127"/>
         <image name="LOGOUTT.png" width="408" height="127.44000244140625"/>
         <image name="apps.43605.13510798887494673.73a8dba3-eb77-4c24-87f7-74f199a14845.png" width="225" height="225"/>
-        <image name="backicon.png" width="512" height="512"/>
+        <image name="backicono.png" width="512" height="512"/>
+        <image name="consonido.png" width="192" height="200"/>
         <image name="dealicono.png" width="480" height="480"/>
     </resources>
 </document>
