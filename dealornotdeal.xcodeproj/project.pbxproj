@@ -41,6 +41,8 @@
 		88781C362BBDCA16003E7BBB /* 16-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 88781C352BBDCA16003E7BBB /* 16-removebg-preview.png */; };
 		888F4EC22BB32E4900E3AAFA /* maletin-removebg-preview.png in Resources */ = {isa = PBXBuildFile; fileRef = 888F4EC12BB32E4900E3AAFA /* maletin-removebg-preview.png */; };
 		88ACC70D2BB337F400678AF2 /* dealicono.png in Resources */ = {isa = PBXBuildFile; fileRef = 88ACC70C2BB337F400678AF2 /* dealicono.png */; };
+		88E9D7262BD1C93A007C604E /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E9D7252BD1C93A007C604E /* RecordViewController.swift */; };
+		88E9D7282BD1CDA5007C604E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E9D7272BD1CDA5007C604E /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		88781C352BBDCA16003E7BBB /* 16-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "16-removebg-preview.png"; sourceTree = "<group>"; };
 		888F4EC12BB32E4900E3AAFA /* maletin-removebg-preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "maletin-removebg-preview.png"; path = "../../../../../Downloads/maletin-removebg-preview.png"; sourceTree = "<group>"; };
 		88ACC70C2BB337F400678AF2 /* dealicono.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dealicono.png; path = ../../../../../Downloads/dealicono.png; sourceTree = "<group>"; };
+		88E9D7252BD1C93A007C604E /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		88E9D7272BD1CDA5007C604E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +119,11 @@
 				88599F332BA37C2B00061689 /* AppDelegate.swift */,
 				88599F352BA37C2B00061689 /* SceneDelegate.swift */,
 				88599F372BA37C2B00061689 /* ViewController.swift */,
+				88E9D7252BD1C93A007C604E /* RecordViewController.swift */,
 				88599F542BA381A700061689 /* SplashViewController.swift */,
 				881B2FBD2BB342B700FE2E0C /* MenuViewController.swift */,
 				881B2FC32BB3548200FE2E0C /* JuegoViewController.swift */,
+				88E9D7272BD1CDA5007C604E /* UserData.swift */,
 				88599F472BA3813800061689 /* imgdod */,
 				88599F392BA37C2B00061689 /* Main.storyboard */,
 				88599F3C2BA37C2D00061689 /* Assets.xcassets */,
@@ -257,7 +263,9 @@
 			files = (
 				88599F382BA37C2B00061689 /* ViewController.swift in Sources */,
 				881B2FBE2BB342B700FE2E0C /* MenuViewController.swift in Sources */,
+				88E9D7282BD1CDA5007C604E /* UserData.swift in Sources */,
 				88599F342BA37C2B00061689 /* AppDelegate.swift in Sources */,
+				88E9D7262BD1C93A007C604E /* RecordViewController.swift in Sources */,
 				88599F362BA37C2B00061689 /* SceneDelegate.swift in Sources */,
 				88599F552BA381A700061689 /* SplashViewController.swift in Sources */,
 				881B2FC42BB3548200FE2E0C /* JuegoViewController.swift in Sources */,
