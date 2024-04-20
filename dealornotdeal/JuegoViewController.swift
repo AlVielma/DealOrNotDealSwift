@@ -274,28 +274,57 @@ class JuegoViewController: UIViewController {
         let alertaFin = UIAlertController(title: "¡Fin del Juego!", message: mensajeFin, preferredStyle: .alert)
         let finalizarJuego = UIAlertAction(title: "Finalizar", style: .default) { _ in
             self.subirdatosplist(record: oferta, nombreJugador: nombreJugador)
-            if let recordViewController = self.storyboard?.instantiateViewController(withIdentifier: "RecordViewController") {
-                  self.navigationController?.pushViewController(recordViewController, animated: true)
-              }
+            self.dismiss(animated: true)
         }
         alertaFin.addAction(finalizarJuego)
         present(alertaFin, animated: true)
     }
 
-        func subirdatosplist(record: Int, nombreJugador: String) {
-            // Crear un diccionario con los datos que deseas guardar
-            let diccionario: [String: Any] = [
-                "record": record,
-                "nombreJugador": nombreJugador
-            ]
+    func subirdatosplist(record: Int, nombreJugador: String) {
+        // Crear un diccionario con los datos que deseas guardar
+        let diccionario: [String: Any] = [
+            "record": record,
+            "nombre": nombreJugador
+        ]
 
-            // Obtener la ruta del archivo Config.plist en el directorio de documentos
-            let ruta = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/Config.plist"
-            let urlArchivo = URL(fileURLWithPath: ruta)
+        // Obtener la ruta del archivo Config.plist en el directorio de documentos
+        let ruta = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/Config.plist"
+        let urlArchivo = URL(fileURLWithPath: ruta)
 
+        // Leer el archivo existente si está disponible
+        if var diccionarioExistente = try? PropertyListSerialization.propertyList(from: Data(contentsOf: urlArchivo), options: [], format: nil) as? [[String: Any]] {
+            // Buscar el registro existente con el mismo nombre de jugador
+            if let indice = diccionarioExistente.firstIndex(where: { $0["nombreJugador"] as? String == nombreJugador }) {
+                diccionarioExistente[indice] = diccionario
+                do {
+                    // Convertir el diccionario a datos en formato XML
+                    let datos = try PropertyListSerialization.data(fromPropertyList: diccionarioExistente, format: .xml, options: 0)
+                    
+                    // Escribir los datos en el archivo
+                    try datos.write(to: urlArchivo)
+                    print("Nuevo récord guardado exitosamente en \(ruta)")
+                } catch {
+                    print("Error al guardar el nuevo récord en el archivo plist: \(error)")
+                }
+            } else {
+                print("No se encontró un registro existente para \(nombreJugador). Se agregará el nuevo registro.")
+                diccionarioExistente.append(diccionario)
+                do {
+                    // Convertir el diccionario a datos en formato XML
+                    let datos = try PropertyListSerialization.data(fromPropertyList: diccionarioExistente, format: .xml, options: 0)
+                    
+                    // Escribir los datos en el archivo
+                    try datos.write(to: urlArchivo)
+                    print("Nuevo récord guardado exitosamente en \(ruta)")
+                } catch {
+                    print("Error al guardar el nuevo récord en el archivo plist: \(error)")
+                }
+            }
+        } else {
+            // Si el archivo no existe o no se puede leer, simplemente guarda los datos
             do {
                 // Convertir el diccionario a datos en formato XML
-                let datos = try PropertyListSerialization.data(fromPropertyList: diccionario, format: .xml, options: 0)
+                let datos = try PropertyListSerialization.data(fromPropertyList: [diccionario], format: .xml, options: 0)
                 
                 // Escribir los datos en el archivo
                 try datos.write(to: urlArchivo)
@@ -304,6 +333,8 @@ class JuegoViewController: UIViewController {
                 print("Error al guardar el archivo plist: \(error)")
             }
         }
+    }
+
     
     
     
