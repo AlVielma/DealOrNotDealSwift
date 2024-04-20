@@ -16,22 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func abrirArchivo() {
-        UserData.sharedUserData().crearUsuarios()
-        let datos = UserData.sharedUserData()
-        let ruta = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/Config.plist"
-        let urlArchivo = URL(fileURLWithPath: ruta)
-        
-        do {
-            let archivo = try Data(contentsOf: urlArchivo)
-            let diccionario = try PropertyListSerialization.propertyList(from: archivo, format: nil) as! [[String:Any]]
-            if let usuario = diccionario.first {
-                datos.nombre = usuario["nombre"] as! String
-                datos.record = usuario["record"] as! Float
-            }
-        } catch {
-            print("Error al leer el archivo plist")
-        }
-    }
+         UserData.sharedUserData().crearUsuariosPorDefectoSiNecesario()
+         let datos = UserData.sharedUserData()
+         let ruta = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] + "/Config.plist"
+         let urlArchivo = URL(fileURLWithPath: ruta)
+         
+         do {
+             let archivo = try Data(contentsOf: urlArchivo)
+             let diccionario = try PropertyListSerialization.propertyList(from: archivo, format: nil) as! [[String:Any]]
+             if let usuario = diccionario.first {
+                 datos.nombre = usuario["nombre"] as! String
+                 datos.record = usuario["record"] as! Int
+             }
+         } catch {
+             print("Error al leer el archivo plist")
+         }
+     }
 
 
 
