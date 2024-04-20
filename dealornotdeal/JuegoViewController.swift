@@ -127,10 +127,13 @@ class JuegoViewController: UIViewController {
             // Llamar al banco cada ciertos maletines y/o rondas
             if self.contadorrounds == 5 || self.contadorrounds == 9 || self.contadorrounds == 12 || self.contadorrounds == 14 {
                 // Reproducir sonido del banquero
+                print(self.primerMaletinValor)
                 reproducirSonidoBanquero()
                 self.llamarAlBanco()
+                
             }
         }
+        
     }
     /*func mostrarValorMaletinAlerta(_ valor: Int) {
         let alerta = UIAlertController(title: "Valor del Maletín", message: "¡Has ganado $\(valor)!", preferredStyle: .alert)
@@ -198,7 +201,7 @@ class JuegoViewController: UIViewController {
         let ofertaBanquero = Int(Double(totalDinero) * porcentajeAleatorio)
 
         // Mostrar la oferta del banquero al jugador
-        let mensajeOferta = "El banquero te ofrece $\(ofertaBanquero). ¿Aceptas la oferta?"
+        let mensajeOferta = "El banquero te ofrece $\(ofertaBanquero) ¿Aceptas la oferta?"
 
         let alertaOferta = UIAlertController(title: "¡Oferta del Banquero!", message: mensajeOferta, preferredStyle: .alert)
 
@@ -208,7 +211,13 @@ class JuegoViewController: UIViewController {
         }
 
         // Acción para rechazar la oferta
-        let rechazarOferta = UIAlertAction(title: "Rechazar", style: .cancel, handler: nil)
+        let rechazarOferta = UIAlertAction(title: "Rechazar", style: .cancel){ _ in
+           
+            if self.contadorrounds == 14{
+                self.mostrarAlertaIntercambio()
+            }
+        
+        }
 
         // Agregar las acciones al UIAlertController de la oferta
         alertaOferta.addAction(aceptarOferta)
@@ -217,6 +226,52 @@ class JuegoViewController: UIViewController {
         // Presentar el UIAlertController de la oferta al jugador
         present(alertaOferta, animated: true)
     }
+    
+    func mostrarAlertaIntercambio() {
+        let alertaIntercambio = UIAlertController(title: "¡Atención!", message: "¡Estás a punto de abrir el penúltimo maletín!\n¿Deseas intercambiar tu primer maletín por el último que queda?", preferredStyle: .alert)
+
+        let intercambiarAction = UIAlertAction(title: "Intercambiar", style: .default) { _ in
+            self.intercambiarMaletines()
+            
+        }
+
+        let mantenerAction = UIAlertAction(title: "Mantener", style: .cancel) { _ in
+            // Continuar el juego sin intercambiar los maletines
+        }
+
+        alertaIntercambio.addAction(intercambiarAction)
+        alertaIntercambio.addAction(mantenerAction)
+
+        present(alertaIntercambio, animated: true)
+    }
+    
+    func intercambiarMaletines() {
+        guard let ultimoPrecio = precioss.last else {
+            // No hay ningún maletín restante para intercambiar
+            return
+        }
+        // Intercambiar los valores del primer y último maletín
+        self.primerMaletinValor = ultimoPrecio
+        
+        // Crear un mensaje personalizado para mostrar al usuario
+        let mensajeIntercambio = "¡Has intercambiado tu primer maletín por el último que queda y su valor es de $\(ultimoPrecio)! ¡Buena suerte con tu nueva elección!"
+        
+        // Mostrar la alerta con el mensaje personalizado
+        let alertaIntercambio = UIAlertController(title: "Intercambio Exitoso", message: mensajeIntercambio, preferredStyle: .alert)
+        
+        // Agregar una acción para que el usuario pueda cerrar la alerta
+        let okAction = UIAlertAction(title: "Aceptar", style: .default) { _ in
+            self.solicitarNombreJugador(ofertaBanquero: self.primerMaletinValor)
+        }
+        
+        // Agregar la acción a la alerta
+        alertaIntercambio.addAction(okAction)
+        
+        // Presentar la alerta al usuario
+        present(alertaIntercambio, animated: true)
+    }
+
+    
 
 
     func solicitarNombreJugador(ofertaBanquero: Int) {
@@ -266,7 +321,7 @@ class JuegoViewController: UIViewController {
     func terminarJuego(conOferta oferta: Int, nombreJugador: String) {
         let mensajeFin: String
         if oferta > 0 {
-            mensajeFin = "\(nombreJugador), ¡felicidades! Has aceptado la oferta del banquero y has ganado $\(oferta)."
+            mensajeFin = "\(nombreJugador), ¡felicidades! Has aceptado la oferta del banquero y has ganado $\(oferta)"
         } else {
             mensajeFin = "\(nombreJugador), ¡felicidades! Has rechazado la oferta del banquero y conservas el premio de tu maletín."
         }
